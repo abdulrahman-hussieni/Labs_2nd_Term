@@ -65,3 +65,19 @@ If sampling frequency is too low, the signal becomes distorted.
 ✔ Perfect Reconstruction
 
 Enough samples ensure accurate waveform rebuilding..
+
+
+انشاء موجة مركبة 
+```matlab
+ % x = A*cos(2*pi*f0*t)
+
+Fs = 8000;
+time = 1;
+t = 0:(1/Fs):time;
+
+x = 0.1*cos(2*pi*300*t) + 0.1*cos(2*pi*400*t);
+
+sound(x, Fs, 16);
+
+
+```
